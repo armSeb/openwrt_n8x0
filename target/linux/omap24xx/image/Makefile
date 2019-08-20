@@ -16,7 +16,7 @@ define Device/Default
   DEVICE_VARS :=
   KERNEL_NAME := zImage
   KERNEL := kernel-bin
-  KERNEL_INITRAMFS := kernel-bin | lzma | append-dtb
+#  KERNEL_INITRAMFS := kernel-bin | lzma | append-dtb
   IMAGES := squashfs
   SUPPORTED_DEVICES = $(subst _,$(comma),$(1))
 endef
@@ -24,7 +24,7 @@ endef
 define Device/n810-base
   DEVICE_TITLE := Nokia N810 (base)
   DEVICE_DTS := omap2420-n810
-  KERNEL_INITRAMFS := kernel-bin | lzma | append-dtb
+  KERNEL_INITRAMFS := kernel-bin | append-dtb 
   DEVICE_PACKAGES := \
 	block-mount \
         gpsd \
